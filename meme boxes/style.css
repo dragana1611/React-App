@@ -1,0 +1,59 @@
+body { 
+    margin: 0;
+    background: #232323;
+}
+
+main {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box-container {
+    height: 225px;
+    display: grid;
+    grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+    grid-gap: 18px;
+    overflow: hidden;
+}
+
+.box {
+    height: 60px;
+    width: 60px;
+    border: 1px solid #343434;
+}
+
+.box:hover, .box:focus {
+    opacity: 0.75;
+    cursor: pointer;
+}
+
+.box:active {
+    box-shadow: inset 2px 2px 5px rgba(20,20,20,0.75);
+}
+
+
+@media screen and (min-width: 500px) {
+    .box-container {
+        height: 300px;
+        grid-template: repeat(4, 1fr) / repeat(4, 1fr)
+    }
+}
+
+@media screen and (min-width: 650px) {
+    .box-container {
+        height: 400px;
+        grid-template: repeat(5, 1fr) / repeat(5, 1fr)
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .box-container {
+        height: 500px;
+        grid-template: repeat(6, 1fr) / repeat(6, 1fr)
+    }
+}
+
+
+
